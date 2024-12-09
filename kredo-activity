@@ -1,0 +1,40 @@
+4. INSERT INTO `employees` (`emp_first_name`,`emp_last_name`,`emp_country`,`emp_gender`,`emp_birthday`) VALUES ('John','Doe','New Zealand','M','1990-1-26'),('Emily','Davis','USA','F','1080-4-23'),('Jack','Dawson','USA','M','1967-10-9');
+5. INSERT INTO `students` (`stud_first_name`,`stud_last_name`,`stud_country`,`stud_course`,`stud_year_level`) VALUES ('John','Christopher','USA','BSN','1'),('Izzy','Graham','Russia','BSEng','4'),('Alec','Bell','Australia','BSIT','3');
+
+
+6. a.
+SELECT * FROM `employees`
+b.
+SELECT * FROM `employees` WHERE `id` = 2;
+c.
+SELECT * FROM `employees` WHERE `emp_gender` = M;
+d.
+SELECT * FROM `employees` WHERE `emp_country` = USA;
+e.
+SELECT `stud_first_name`,`stud_last_name`,`stud_course` FROM `students`;
+f.
+SELECT `stud_last_name`,`stud_course`,`stud_year_level` FROM `students` WHERE `id` = 3;
+g.
+SELECT `stud_first_name`,`stud_last_name`,`stud_course`,`stud_year_level` FROM `students` WHERE `id` = 1;
+	
+John
+Christopher
+BSN
+1
+
+SELECT CONCAT(`stud_first_name`, ' ', `stud_last_name`) AS `name`, `stud_course`AS `course`, `stud_year_level`AS `year_level`FROM `students`WHERE id=3;
+
+
+7.a.
+UPDATE `employees`SET`emp_birthday` = '1990-3-26' WHERE id = 1;
+b.
+UPDATE `employees`SET`stud_last_name` = 'Johnson' WHERE id = 2;
+c.
+UPDATE `students`SET`stud_course` = 'BSA',`stud_year_level` = '2' WHERE `stud_first_name` = "Alec";
+
+8.a.
+DELETE FROM `employees` WHERE id =3
+b.
+DELETE FROM `students` WHERE id IN(1,2);
+
+
